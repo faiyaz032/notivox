@@ -29,6 +29,7 @@
     "node": ">=18.x"
   },
   "dependencies": {
+    "bullmq": "^5.47.3",
     "nodemailer": "^6.10.0"
   },
   "devDependencies": {
