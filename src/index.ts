@@ -22,9 +22,12 @@ export class Notivox {
   }
 
   private async instantiateAdapters(config: ChannelsConfig): Promise<void> {
+    // Check for email configuration
     if (config.email?.nodemailer) {
       const { NodemailerAdapter } = await import('./channels/email/adapters/nodemailer.adapter');
-      this.adapters.set('nodemailer', new NodemailerAdapter(config.email.nodemailer));
+      // Pass Redis config if available
+      const redisConfig = config.queue?.redis;
+      this.adapters.set('nodemailer', new NodemailerAdapter(config.email.nodemailer, redisConfig));
     }
   }
 }
