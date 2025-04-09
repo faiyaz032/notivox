@@ -1,7 +1,7 @@
-import { MailOptions } from 'nodemailer/lib/json-transport';
+import { SendEmailOptions } from './MailOptions.types';
 
 export type NotificationJob = {
   type: 'email' | 'sms' | 'push';
-  payload: MailOptions;
+  payload: SendEmailOptions;
   adapterName: 'nodemailer' | 'twilio' | 'firebase';
 };
