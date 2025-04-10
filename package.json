@@ -1,6 +1,6 @@
 {
   "name": "notivox",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Notivox is a cross-platform notification orchestrator for Node.js, unifying delivery across email, SMS, push, and emerging channels (e.g., WhatsApp, Telegram). It includes a rule engine for prioritizing channels and a robust retry mechanism for failed deliveries.",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
